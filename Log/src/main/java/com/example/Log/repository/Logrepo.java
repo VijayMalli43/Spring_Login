@@ -9,3 +9,10 @@ import java.util.Optional;
 public interface Logrepo extends MongoRepository<Logentity, String> {
     Optional<Logentity> findByEmail(String email);
 }
+///| When?                                                         | Use This              |
+///        | ------------------------------------------------------------- | --------------------- |
+///        | You're not sure if a value is present                         | `Optional<T>`         |
+ ///       | You're returning a list of items                              | `List<T>`             |
+///        | You're building an API and want to return status codes + body | `ResponseEntity<T>`   |
+///        | You want pagination                                           | `Page<T>`             |
+ ///       | You're working with key-value or JSON-like structure          | `Map<String, Object>` |
